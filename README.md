@@ -14,7 +14,7 @@ Projekt wykorzystuje następujące technologie:
     Composer – zarządzanie zależnościami PHP
     npm – zarządzanie zależnościami front-endowymi
 
-Instalacja
+# Instalacja
 
 Aby uruchomić projekt na swoim komputerze, wykonaj poniższe kroki:
 
@@ -31,7 +31,7 @@ Instalacja zależności front-endowych: Zainstaluj zależności JavaScriptowe pr
 
 npm install
 
-Ustawienia środowiskowe: Skopiuj plik .env.example do .env:
+# Ustawienia środowiskowe: Skopiuj plik .env.example do .env:
 
 cp .env.example .env
 
@@ -41,7 +41,7 @@ Generowanie klucza aplikacji Laravel:
 
 php artisan key:generate
 
-Migracje bazy danych: Wykonaj migracje bazy danych:
+# Migracje bazy danych: Wykonaj migracje bazy danych:
 
 php artisan migrate
 
@@ -51,7 +51,7 @@ Uruchomienie serwera lokalnego: Uruchom serwer lokalny aplikacji:
 
     Aplikacja będzie dostępna pod adresem: http://localhost:8000.
 
-Funkcje
+# Funkcje
 
 Aplikacja oferuje szereg funkcji, w tym:
 
@@ -61,13 +61,13 @@ Aplikacja oferuje szereg funkcji, w tym:
     Zamówienia – użytkownicy mogą finalizować zakupy.
     Panel administracyjny – administratorzy mogą zarządzać produktami, kategoriami oraz użytkownikami sklepu.
 
-Wymagania systemowe
+# Wymagania systemowe
 
     PHP 7.4 lub nowszy
     Composer – narzędzie do zarządzania zależnościami PHP
     MySQL – baza danych
     Node.js i npm – do zarządzania zależnościami frontendowymi (React, Bootstrap, itp.)
 
-Licencja
+# Licencja
 
 Projekt jest dostępny na licencji MIT. Szczegóły można znaleźć w pliku LICENSE.
