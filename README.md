@@ -31,7 +31,9 @@ Instalacja zależności front-endowych: Zainstaluj zależności JavaScriptowe pr
 
 npm install
 
-# Ustawienia środowiskowe: Skopiuj plik .env.example do .env:
+# Ustawienia środowiskowe: 
+
+Skopiuj plik .env.example do .env:
 
 cp .env.example .env
 
