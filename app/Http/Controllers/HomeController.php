@@ -14,7 +14,7 @@ use App\Models\Product;
 use App\Models\Cart;
 
 use App\Models\Order;
-
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -24,6 +24,8 @@ class HomeController extends Controller
         $product = Cache::remember('products.all', now()->addHours(4), function () {
             return Product::all();
         });
+
+        Log::info("xd");
     
         return view('home.userpage', compact('product'));
     }
