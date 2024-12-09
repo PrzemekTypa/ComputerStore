@@ -1,75 +1,66 @@
-# SklepKomputerowy
+# Sklep Komputerowy
 
-SklepKomputerowy to internetowa aplikacja sklepu komputerowego, umożliwiająca użytkownikom przeglądanie podzespołów komputerowych, dodawanie produktów do koszyka, a także zakupu online. Aplikacja posiada pełną funkcjonalność panelu administracyjnego, umożliwiającego zarządzanie produktami, użytkownikami oraz zamówieniami.
-Technologie
+**Sklep Komputerowy** SklepKomputerowy to internetowa aplikacja sklepu komputerowego, umożliwiająca użytkownikom przeglądanie podzespołów komputerowych, \n
+dodawanie produktów do koszyka, a także zakupu online. Aplikacja posiada pełną funkcjonalność panelu administracyjnego, umożliwiającego zarządzanie produktami, użytkownikami oraz zamówieniami.
 
-Projekt wykorzystuje następujące technologie:
+---
 
-    PHP (Laravel) – backend, logika aplikacji
-    MySQL – baza danych
-    JavaScript (React) – interaktywne elementy frontendowe
-    Bootstrap – responsywny design
-    CSS – style
-    Laravel – framework PHP, w którym aplikacja jest zbudowana
-    Composer – zarządzanie zależnościami PHP
-    npm – zarządzanie zależnościami front-endowymi
+## Wymagania
 
-# Instalacja
+Aby uruchomić projekt lokalnie, potrzebujesz następujących programów i wersji:
 
-Aby uruchomić projekt na swoim komputerze, wykonaj poniższe kroki:
+- **XAMPP**: 8.2.12  
+  [Pobierz XAMPP](https://www.apachefriends.org/index.html)
 
-    Klonowanie repozytorium:
+- **Composer**: 2.8.3  
+  [Pobierz Composer](https://getcomposer.org/)
 
+- **Node.js**: 22.12.0  
+  [Pobierz Node.js](https://nodejs.org/)
+
+- **NPM**: 10.9.0 (zainstalowane razem z Node.js)
+
+---
+
+## Instalacja i uruchomienie
+
+Wykonaj poniższe kroki, aby zainstalować i uruchomić projekt lokalnie:
+
+```bash
+# 1. Klonowanie repozytorium
 git clone https://github.com/Przem-T/SklepKomputerowy.git
 cd SklepKomputerowy
 
-Instalacja zależności PHP: Zainstaluj zależności backendowe za pomocą Composer:
-
+# 2. Instalacja zależności PHP
 composer install
 
-Instalacja zależności front-endowych: Zainstaluj zależności JavaScriptowe przy pomocy npm:
-
+# 3. Instalacja zależności frontendowych
 npm install
 
-# Ustawienia środowiskowe: 
-
-Skopiuj plik .env.example do .env:
-
+# 4. Utworzenie pliku .env
 cp .env.example .env
 
-Skonfiguruj plik .env w zależności od swojego środowiska (np. konfiguracja bazy danych).
+# Następnie dostosuj ustawienia w pliku .env:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=sklep_komputerowy
+# DB_USERNAME=root
+# DB_PASSWORD=
 
-Generowanie klucza aplikacji Laravel:
-
+# 5. Wygenerowanie klucza aplikacji
 php artisan key:generate
 
-# Migracje bazy danych: Wykonaj migracje bazy danych:
-
+# 6. Migracje bazy danych
 php artisan migrate
 
-Uruchomienie serwera lokalnego: Uruchom serwer lokalny aplikacji:
+# 7. Budowanie zasobów frontendowych
+npm run dev # (dla środowiska developerskiego)
+# lub
+npm run build # (dla środowiska produkcyjnego)
 
-    php artisan serve
+# 8. Uruchomienie serwera aplikacji
+php artisan serve
 
-    Aplikacja będzie dostępna pod adresem: http://localhost:8000.
-
-# Funkcje
-
-Aplikacja oferuje szereg funkcji, w tym:
-
-    Przeglądanie produktów – użytkownicy mogą przeglądać produkty w sklepie, filtrować je według kategorii i ceny.
-    Dodawanie produktów do koszyka – użytkownicy mogą dodawać produkty do koszyka.
-    Rejestracja i logowanie użytkowników – użytkownicy mogą rejestrować się i logować, aby składać zamówienia.
-    Zamówienia – użytkownicy mogą finalizować zakupy.
-    Panel administracyjny – administratorzy mogą zarządzać produktami, kategoriami oraz użytkownikami sklepu.
-
-# Wymagania systemowe
-
-    PHP 7.4 lub nowszy
-    Composer – narzędzie do zarządzania zależnościami PHP
-    MySQL – baza danych
-    Node.js i npm – do zarządzania zależnościami frontendowymi (React, Bootstrap, itp.)
-
-# Licencja
-
-Projekt jest dostępny na licencji MIT. Szczegóły można znaleźć w pliku LICENSE.
+# Aplikacja będzie dostępna pod adresem:
+# http://127.0.0.1:8000
