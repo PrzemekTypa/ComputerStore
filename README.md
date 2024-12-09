@@ -1,7 +1,7 @@
 # Sklep Komputerowy
 
-**Sklep Komputerowy** SklepKomputerowy to internetowa aplikacja sklepu komputerowego, umożliwiająca użytkownikom przeglądanie podzespołów komputerowych, \n
-dodawanie produktów do koszyka, a także zakupu online. Aplikacja posiada pełną funkcjonalność panelu administracyjnego, umożliwiającego zarządzanie produktami, użytkownikami oraz zamówieniami.
+**Sklep Komputerowy** to internetowa aplikacja sklepu komputerowego, umożliwiająca użytkownikom przeglądanie podzespołów komputerowych,  
+dodawanie produktów do koszyka, a także zakupy online. Aplikacja posiada pełną funkcjonalność panelu administracyjnego, umożliwiającego zarządzanie produktami, użytkownikami oraz zamówieniami.
 
 ---
 
@@ -26,41 +26,66 @@ Aby uruchomić projekt lokalnie, potrzebujesz następujących programów i wersj
 
 Wykonaj poniższe kroki, aby zainstalować i uruchomić projekt lokalnie:
 
+### 1. Klonowanie repozytorium
 ```bash
-# 1. Klonowanie repozytorium
 git clone https://github.com/Przem-T/SklepKomputerowy.git
 cd SklepKomputerowy
+```
 
-# 2. Instalacja zależności PHP
+### 2. Instalacja zależności PHP
+```bash
 composer install
+```
 
-# 3. Instalacja zależności frontendowych
+### 3. Instalacja zależności frontendowych
+```bash
 npm install
+```
 
-# 4. Utworzenie pliku .env
+### 4. Utworzenie pliku `.env`
+Skopiuj przykładowy plik `.env`:
+```bash
 cp .env.example .env
+```
 
-# Następnie dostosuj ustawienia w pliku .env:
-# DB_CONNECTION=mysql
-# DB_HOST=127.0.0.1
-# DB_PORT=3306
-# DB_DATABASE=sklep_komputerowy
-# DB_USERNAME=root
-# DB_PASSWORD=
+Następnie dostosuj ustawienia w pliku `.env`:
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sklep_komputerowy
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-# 5. Wygenerowanie klucza aplikacji
+### 5. Wygenerowanie klucza aplikacji
+```bash
 php artisan key:generate
+```
 
-# 6. Migracje bazy danych
+### 6. Migracje bazy danych
+```bash
 php artisan migrate
+```
 
-# 7. Budowanie zasobów frontendowych
-npm run dev # (dla środowiska developerskiego)
-# lub
-npm run build # (dla środowiska produkcyjnego)
+### 7. Budowanie zasobów frontendowych
 
-# 8. Uruchomienie serwera aplikacji
+Dla środowiska developerskiego:
+```bash
+npm run dev
+```
+
+Lub dla środowiska produkcyjnego:
+```bash
+npm run build
+```
+
+### 8. Uruchomienie serwera aplikacji
+```bash
 php artisan serve
+```
 
-# Aplikacja będzie dostępna pod adresem:
-# http://127.0.0.1:8000
+Aplikacja będzie dostępna pod adresem:
+```
+http://127.0.0.1:8000
+```
