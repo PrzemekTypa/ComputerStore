@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Cache;
 
 use Illuminate\Http\Request;
 
@@ -14,21 +13,16 @@ use App\Models\Product;
 use App\Models\Cart;
 
 use App\Models\Order;
-use Illuminate\Support\Facades\Log;
+
 
 class HomeController extends Controller
 {
     public function index()
     {   
-        // Cachowanie danych produktów
-        $product = Cache::remember('products.all', now()->addHours(4), function () {
-            return Product::all();
-        });
-
-        Log::info("xd");
-    
+        $product=Product::all();
         return view('home.userpage', compact('product'));
     }
+
     
     public function dashboard()
     {
@@ -41,23 +35,15 @@ class HomeController extends Controller
         } 
         else 
         {
-             // Cachowanie danych produktów, co 4h
-            $product = Cache::remember('products.all', now()->addHours(4), function () {
-                return Product::all();
-            });
-    
+            $product=Product::all();
             return view('home.userpage', compact('product'));
         }
+        
     }
 
-        
     public function product_details($id)
     {
-        //Cachowanie szczegółów produktu, co 4h
-        $product = Cache::remember('product.details.'.$id, now()->addHours(4), function () use ($id) {
-            return Product::find($id);
-        });
-    
+        $product=product::find($id);
         return view('home.product_details', compact('product'));
     }
 
@@ -166,11 +152,6 @@ class HomeController extends Controller
     public function payment_unavailable()
     {
         return view('home.payment_unavailable');
-    }
-
-    public function about()
-    {
-        return view('home.about');
     }
 
 }
