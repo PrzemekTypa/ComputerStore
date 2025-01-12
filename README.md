@@ -1,7 +1,7 @@
 # Sklep Komputerowy
 
-**Sklep Komputerowy** to internetowa aplikacja sklepu komputerowego, umożliwiająca użytkownikom przeglądanie podzespołów komputerowych,  
-dodawanie produktów do koszyka, a także zakupy online. Aplikacja posiada pełną funkcjonalność panelu administracyjnego, umożliwiającego zarządzanie produktami, użytkownikami oraz zamówieniami.
+**Sklep Komputerowy** A Computer Store project developed for the second year of studies. Its an e-commerce platform built with Laravel, allowing users to browse and purchase computer components,
+ while providing an admin panel for managing products, users, and orders.
 
 ---
 
@@ -28,7 +28,7 @@ Wykonaj poniższe kroki, aby zainstalować i uruchomić projekt lokalnie:
 
 ### 1. Klonowanie repozytorium
 ```bash
-git clone https://github.com/Przem-T/SklepKomputerowy.git
+git clone https://github.com/PrzemekTypa/SklepKomputerowy.git
 cd SklepKomputerowy
 ```
 
@@ -53,7 +53,7 @@ Następnie dostosuj ustawienia w pliku `.env`:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=sklep_komputerowy
+DB_DATABASE=ecommercepro
 DB_USERNAME=root
 DB_PASSWORD=
 ```

@@ -154,4 +154,9 @@ class HomeController extends Controller
         return view('home.payment_unavailable');
     }
 
+    public function about()
+    {
+        return view('home.about');
+    }
+
 }
