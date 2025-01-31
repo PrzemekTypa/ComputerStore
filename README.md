@@ -1,6 +1,6 @@
-# Sklep Komputerowy
+# Computer Store
 
-**Sklep Komputerowy** A Computer Store project developed for the second year of studies. Its an e-commerce platform built with Laravel, allowing users to browse and purchase computer components,
+**Computer Store** A Computer Store project developed for the second year of studies. Its an e-commerce platform built with Laravel, allowing users to browse and purchase computer components,
  while providing an admin panel for managing products, users, and orders.
 
 ---
