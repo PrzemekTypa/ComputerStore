@@ -28,8 +28,8 @@ Follow these steps to install and run the project locally:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/PrzemekTypa/SklepKomputerowy.git
-cd SklepKomputerowy
+git clone https://github.com/PrzemekTypa/ComputerStore.git
+cd ComputerStore
 ```
 
 ### 2. Install PHP Dependencies
